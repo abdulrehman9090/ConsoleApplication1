@@ -62,6 +62,7 @@ public:
 	void forward();
 	void insertAtStart(int d);
 	void backward();
+	void find(int);
 
 };
 
@@ -112,6 +113,31 @@ void LinkedList::showList()
 
 void LinkedList::remove()
 {
+
+
+	// first element to delete
+	if (current == head) {
+		Node* temp = head;
+		head = current->getNext();
+		delete temp;
+		current = head;
+		return;
+	}
+
+
+	Node* ptr = head;
+	do {
+		if (ptr->getNext() == current) {
+			break;
+		}
+		ptr = ptr->getNext();
+
+	} while (ptr != NULL);
+
+	ptr->setNext(current->getNext());
+	delete current;
+	current = ptr;
+
 }
 
 void LinkedList::get()
@@ -159,6 +185,33 @@ void LinkedList::backward()
 	current = temp;
 }
 
+void LinkedList::find(int d) {
+	if (size == 0) {
+		cout << "List is empty" << endl;
+		return;
+	}
+	bool found = false;
+	Node* ptr = head;
+	do
+	{
+		if (ptr->getData() == d) {
+			cout << "Value found" << endl;
+			found = true;
+			break;
+		}
+
+		ptr = ptr->getNext();
+		
+
+	} while (ptr != NULL);
+
+	if (found == false) {
+		cout << "Value not found" << endl;
+	}
+
+
+}
+
 
 
 
@@ -166,12 +219,18 @@ void LinkedList::backward()
 int main() {
 	LinkedList list;
 	//list.showList();
-	list.add(10);
+	//list.add(10);
 	//list.add(20);
 	//list.add(30);
-	//list.showList();
-	//
+	list.showList();
+
+	list.find(30);
+
 	//list.backward();
+	//list.backward();
+	//list.get();
+	//list.remove();
+	//list.showList();
 	//list.backward();
 	//
 
@@ -179,8 +238,8 @@ int main() {
 	//list.showList();
 
 
-	list.insertAtStart(121);
-	list.showList();
+	/*list.insertAtStart(121);
+	list.showList();*/
 	//list.forward();
 	//list.forward();
 	//list.add(19);
