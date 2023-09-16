@@ -137,11 +137,17 @@
 //	ptr->setNext(current->getNext());
 //	delete current;
 //	current = ptr;
+//  size--;
 //
 //}
 //
 //void LinkedList::get()
 //{
+// if (size == 0) 
+//{
+//	cout << "List is empty" << endl;
+//	return;
+//	}
 //	cout << current->getData() << endl;
 //}
 //
@@ -160,6 +166,7 @@
 //	Node* ptr = new Node(d);
 //	ptr->setNext(head);
 //	head = ptr;
+//  size++;
 //}
 //
 //void LinkedList::backward()
