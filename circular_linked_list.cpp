@@ -82,7 +82,8 @@
 //	if (head == NULL) {
 //		head = ptr;
 //		current = ptr;
-//		
+//		current->setNext(ptr);
+//
 //	}
 //	else {
 //		ptr->setNext(current->getNext());
@@ -101,11 +102,10 @@
 //	}
 //
 //	Node* temp = head;
-//	while (temp != NULL)
-//	{
+//	do{
 //		temp->showData();
 //		temp = temp->getNext();
-//	}
+//	} while (temp != head);
 //	cout << endl;
 //
 //
@@ -117,11 +117,9 @@
 //
 //	// first element to delete
 //	if (current == head) {
-//		Node* temp = head;
+//		
 //		head = current->getNext();
-//		delete temp;
-//		current = head;
-//		return;
+//		
 //	}
 //
 //
@@ -132,7 +130,7 @@
 //		}
 //		ptr = ptr->getNext();
 //
-//	} while (ptr != NULL);
+//	} while (ptr != head);
 //
 //	ptr->setNext(current->getNext());
 //	delete current;
@@ -147,7 +145,7 @@
 //
 //void LinkedList::forward()
 //{
-//	if (current->getNext() != NULL)
+//	if (head != NULL)
 //		current = current->getNext();
 //}
 //
@@ -166,10 +164,6 @@
 //{
 //	if (size == 0) {
 //		cout << "List is empty Can't go backward" << endl;
-//		return;
-//	}
-//	if (current == head) {
-//		cout << "Already at start. Can't go backward" << endl;
 //		return;
 //	}
 //
@@ -201,9 +195,9 @@
 //		}
 //
 //		ptr = ptr->getNext();
-//		
 //
-//	} while (ptr != NULL);
+//
+//	} while (ptr != head);
 //
 //	if (found == false) {
 //		cout << "Value not found" << endl;
@@ -215,50 +209,51 @@
 //
 //
 //
-///// <summary>
-///// 
-///// </summary>
-///// <returns></returns>
+//
 //int main() {
 //	LinkedList list;
-//	//list.showList();
-//	//list.add(10);
-//	//list.add(20);
-//	//list.add(30);
+//	list.showList();
+//	list.add(10);
+//	list.add(20);
+//	list.add(30);
 //	list.showList();
 //
-//	list.find(30);
+//	list.find(23);
 //
-//	//list.backward();
-//	//list.backward();
-//	//list.get();
-//	//list.remove();
-//	//list.showList();
-//	//list.backward();
-//	//
+//	list.backward();
+//	list.backward();
+//	list.get();
+//	list.remove();
+//	list.showList();
+//	list.get();
+//	list.backward();
+//	list.remove();
+//	list.showList();
+//	////list.backward();
+//	////
 //
-//	//list.add(11);
-//	//list.showList();
-//
-//
-//	/*list.insertAtStart(121);
-//	list.showList();*/
-//	//list.forward();
-//	//list.forward();
-//	//list.add(19);
-//	//list.showList();
-//
-//	//list.get();
-//	//list.backward();
-//	//list.get();
-//	//list.forward();
-//	//list.get();
-//	//list.forward();
-//	//list.get();
-//	//list.forward();
-//	//list.get();
+//	////list.add(11);
+//	////list.showList();
 //
 //
-//	
+//	///*list.insertAtStart(121);
+//	//list.showList();*/
+//	////list.forward();
+//	////list.forward();
+//	////list.add(19);
+//	////list.showList();
+//
+//	////list.get();
+//	////list.backward();
+//	////list.get();
+//	////list.forward();
+//	////list.get();
+//	////list.forward();
+//	////list.get();
+//	////list.forward();
+//	////list.get();
+//
+//
+//
 //	return 0;
 //}

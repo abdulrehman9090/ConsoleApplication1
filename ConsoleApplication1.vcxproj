@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="circular_linked_list.cpp" />
     <ClCompile Include="linkedlist.cpp" />
     <ClCompile Include="list.cpp" />
   </ItemGroup>
