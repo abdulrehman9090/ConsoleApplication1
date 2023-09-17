@@ -130,6 +130,8 @@
     <ClCompile Include="circlularDoublyLinkedList.cpp" />
     <ClCompile Include="circular_linked_list.cpp" />
     <ClCompile Include="doublyLinkedList.cpp" />
+    <ClCompile Include="JosepProblem_1.cpp" />
+    <ClCompile Include="josepProblem_Cr_Gr.cpp" />
     <ClCompile Include="linkedlist.cpp" />
     <ClCompile Include="list.cpp" />
   </ItemGroup>

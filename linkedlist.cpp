@@ -63,10 +63,10 @@
 //	void insertAtStart(int d);
 //	void backward();
 //	void find(int);
+//	int getLength();
+//	void start();
 //
 //};
-//
-//
 //
 //LinkedList::LinkedList() {
 //	size = 0;
@@ -74,6 +74,23 @@
 //	current = NULL;
 //	head = NULL;
 //}
+//
+//
+//int LinkedList::getLength() {
+//	return size;
+//}
+//
+//
+//void LinkedList::start() {
+//	if (size == 0) {
+//		cout << "list is empty" << endl;
+//		return;
+//	}
+//	current = head;
+//}
+//
+//
+//
 //
 //void LinkedList::add(int d)
 //{
@@ -121,11 +138,13 @@
 //		head = current->getNext();
 //		delete temp;
 //		current = head;
+//      size--;
 //		return;
 //	}
 //
 //
 //	Node* ptr = head;
+//	Node* temp = current;
 //	do {
 //		if (ptr->getNext() == current) {
 //			break;
@@ -135,8 +154,9 @@
 //	} while (ptr != NULL);
 //
 //	ptr->setNext(current->getNext());
-//	delete current;
-//	current = ptr;
+//	current = ptr->getNext();
+//	delete temp;
+//	
 //  size--;
 //
 //}
@@ -229,20 +249,21 @@
 //int main() {
 //	LinkedList list;
 //	//list.showList();
-//	//list.add(10);
-//	//list.add(20);
-//	//list.add(30);
+//	list.add(10);
+//	list.add(20);
+//	list.add(30);
 //	list.showList();
-//
+//	list.start();
+//	list.get();
 //	list.find(30);
 //
-//	//list.backward();
-//	//list.backward();
-//	//list.get();
-//	//list.remove();
-//	//list.showList();
-//	//list.backward();
-//	//
+//	list.backward();
+//	list.backward();
+//	list.get();
+//	list.remove();
+//	list.showList();
+//	list.backward();
+//	
 //
 //	//list.add(11);
 //	//list.showList();

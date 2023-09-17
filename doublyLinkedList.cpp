@@ -79,6 +79,8 @@
 //	void insertAtStart(int d);
 //	void backward();
 //	void find(int);
+//	int getLength();
+//	void start();
 //
 //};
 //
@@ -90,6 +92,20 @@
 //	current = NULL;
 //	head = NULL;
 //}
+//
+//int LinkedList::getLength() {
+//	return size;
+//}
+//
+//
+//void LinkedList::start() {
+//	if (size == 0) {
+//		cout << "list is empty" << endl;
+//		return;
+//	}
+//	current = head;
+//}
+//
 //
 //void LinkedList::add(int d)
 //{
