@@ -179,8 +179,12 @@
 //			current = head;
 //			return;
 //		}
-//
-//		current = current->getNext();
+//		if (current->getNext() == NULL) {
+//			current = current->getPrevious();
+//		}
+//		else {
+//			current = current->getNext();
+//		}
 //	}
 //	delete temp;
 //	
@@ -267,7 +271,7 @@
 //
 //int main() {
 //	LinkedList list;
-//	//list.showList();
+//
 //	list.add(10);
 //	list.add(20);
 //	list.add(30);
@@ -275,48 +279,10 @@
 //	list.backward();
 //	list.remove();
 //	list.get();
-//	/*list.remove();
-//	list.get();*/
+//	list.remove();
+//	list.get();
+//	list.showList();
 //	
-//	list.showList();
-//
-//	list.add(202);
-//	list.add(303);
-//	list.showList();
-//
-//	list.backward();
-//	list.remove();
-//	list.showList();
-//	/*list.backward();
-//	list.get();*/
-//	/*list.get();
-//	list.backward();
-//	list.remove();
-//	list.showList();*/
-//	////list.backward();
-//	////
-//
-//	////list.add(11);
-//	////list.showList();
-//
-//
-//	///*list.insertAtStart(121);
-//	//list.showList();*/
-//	////list.forward();
-//	////list.forward();
-//	////list.add(19);
-//	////list.showList();
-//
-//	////list.get();
-//	////list.backward();
-//	////list.get();
-//	////list.forward();
-//	////list.get();
-//	////list.forward();
-//	////list.get();
-//	////list.forward();
-//	////list.get();
-//
 //
 //
 //	return 0;

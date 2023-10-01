@@ -250,80 +250,17 @@
 //int main() {
 //	LinkedList list;
 //
-//	for (int i = 1; i <= 10; i++)
-//	{
-//		list.add(i);
-//	}
 //	
 //	list.showList();
-//
-//	list.start();
-//
-//	while (list.getLength() > 1) {
-//		for (int i = 1; i <= 3; i++) list.forward();
-//
-//		list.remove();
-//	}
-//	cout << "leader is ";
+//	list.add(10);
+//	list.add(30);
+//	list.add(20);
 //	list.get();
-//
-//
-////	list.showList();
-////	list.add(10);
-////	list.add(30);
-////	list.add(20);
-////	list.get();
-////	list.showList();
-////	list.start();
-////	list.get();
-////	//list.add(20);
-////	//list.add(30);
-////	//list.showList();
-////
-////	//list.find(23);
-////
-////	//list.backward();
-////	//list.backward();
-////	//
-////	//list.get();
-////	//list.insertAtStart(121);
-////	//list.showList();
-////
-////
-////	//list.backward();
-////	//list.add(234);
-////	//list.insertAtStart(0);
-////	//list.showList();
-////	/*list.remove();
-////	list.showList();
-////	list.get();
-////	list.backward();
-////	list.remove();
-////	list.showList();*/
-////	////list.backward();
-////	////
-////
-////	////list.add(11);
-////	////list.showList();
-////
-////
-////	///*list.insertAtStart(121);
-////	//list.showList();*/
-////	////list.forward();
-////	////list.forward();
-////	////list.add(19);
-////	////list.showList();
-////
-////	////list.get();
-////	////list.backward();
-////	////list.get();
-////	////list.forward();
-////	////list.get();
-////	////list.forward();
-////	////list.get();
-////	////list.forward();
-////	////list.get();
-////
+//	list.showList();
+//	list.start();
+//	list.get();
+//    list.insertAtStart(121);
+//    list.showList();
 //
 //
 //	return 0;

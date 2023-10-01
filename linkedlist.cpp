@@ -242,10 +242,7 @@
 //
 //
 //
-///// <summary>
-///// 
-///// </summary>
-///// <returns></returns>
+//
 //int main() {
 //	LinkedList list;
 //	//list.showList();
@@ -265,26 +262,7 @@
 //	list.backward();
 //	
 //
-//	//list.add(11);
-//	//list.showList();
-//
-//
-//	/*list.insertAtStart(121);
-//	list.showList();*/
-//	//list.forward();
-//	//list.forward();
-//	//list.add(19);
-//	//list.showList();
-//
-//	//list.get();
-//	//list.backward();
-//	//list.get();
-//	//list.forward();
-//	//list.get();
-//	//list.forward();
-//	//list.get();
-//	//list.forward();
-//	//list.get();
+//	
 //
 //
 //	

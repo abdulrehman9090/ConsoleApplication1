@@ -205,26 +205,26 @@
 //    cout << endl;
 //}
 //
-////int main() {
-////    List list(4), l2(4);
-////
-////    list.add(10);
-////    list.add(130);
-////    list.add(160);
-////    list.printList();
-////
-////
-////
-////
-////    l2.add(3);
-////    l2.add(4);
-////    l2.add(5);
-////    l2.printList();
-////
-////
-////    l2.copyList(list);
-////    l2.printList();
-////    list.printList();
-////
-////    return 0;
-////}
+//int main() {
+//    List list(4), l2(4);
+//
+//    list.add(10);
+//    list.add(130);
+//    list.add(160);
+//    list.printList();
+//
+//
+//
+//
+//    l2.add(3);
+//    l2.add(4);
+//    l2.add(5);
+//    l2.printList();
+//
+//
+//    l2.copyList(list);
+//    l2.printList();
+//    list.printList();
+//
+//    return 0;
+//}

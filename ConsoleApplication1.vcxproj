@@ -132,8 +132,14 @@
     <ClCompile Include="doublyLinkedList.cpp" />
     <ClCompile Include="JosepProblem_1.cpp" />
     <ClCompile Include="josepProblem_Cr_Gr.cpp" />
+    <ClCompile Include="lab1.cpp" />
+    <ClCompile Include="lab3.cpp" />
+    <ClCompile Include="lab8.cpp" />
+    <ClCompile Include="lab9.cpp" />
     <ClCompile Include="linkedlist.cpp" />
     <ClCompile Include="list.cpp" />
+    <ClCompile Include="stackWithArray.cpp" />
+    <ClCompile Include="stackWithLinkedList.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
