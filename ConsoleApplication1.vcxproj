@@ -138,6 +138,7 @@
     <ClCompile Include="lab9.cpp" />
     <ClCompile Include="linkedlist.cpp" />
     <ClCompile Include="list.cpp" />
+    <ClCompile Include="postfix_evaluation.cpp" />
     <ClCompile Include="stackWithArray.cpp" />
     <ClCompile Include="stackWithLinkedList.cpp" />
   </ItemGroup>
