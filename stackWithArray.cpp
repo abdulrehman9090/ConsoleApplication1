@@ -71,21 +71,16 @@
 //
 //
 //int main() {
-//    Stack stack(4);
-//    cout << stack.push(10) << endl;
-//    cout<< stack.push(20)<<endl;
-//    cout<< stack.push(30)<<endl;
-//    cout << stack.push(40) << endl;
-//    stack.push(12);
-//    
-//    cout << stack.pop() << endl;
-//    cout << stack.pop() << endl;
-//    cout << stack.pop() << endl;
-//    cout << stack.pop() << endl;
-//
-//    stack.pop();
-//
-//   stack.top();
+//    Stack* s = new Stack(4);
+//    cout << s->push(5) << endl;
+//    cout << s->push(10) << endl;
+//    cout << s->push(15) << endl;
+//    cout << s->push(20) << endl;
+//    cout << s->push(25) << endl;
+//    cout << s->pop() << endl;
+//    cout << s->pop() << endl;
+//    cout << s->push(30) << endl;
+//    cout << s->top() << endl;
 //
 //    return 0;
 //}

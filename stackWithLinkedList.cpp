@@ -2,120 +2,257 @@
 //#include <string>
 //using namespace std;
 //
+//template <typename T>
 //class Node {
 //private:
-//	int data;
-//	Node* next;
+//    T data;
+//    Node* next;
+//
 //public:
-//	Node(int d);
-//	Node* getNext();
-//	void setNext(Node* ptr);
-//	int getData();
-//	void setData(int d);
-//	void showData();
+//    Node(T d);
+//    Node* getNext();
+//    void setNext(Node* ptr);
+//    T getData();
+//    void setData(T d);
+//    void showData();
 //};
 //
-//
-//Node::Node(int d)
-//{
-//	data = d;
-//	next = NULL;
+//template <typename T>
+//Node<T>::Node(T d) {
+//    data = d;
+//    next = nullptr;
 //}
 //
-//Node* Node::getNext()
-//{
-//	return next;
+//template <typename T>
+//Node<T>* Node<T>::getNext() {
+//    return next;
 //}
 //
-//void Node::setNext(Node* ptr)
-//{
-//	next = ptr;
+//template <typename T>
+//void Node<T>::setNext(Node* ptr) {
+//    next = ptr;
 //}
 //
-//int Node::getData()
-//{
-//	return data;
+//template <typename T>
+//T Node<T>::getData() {
+//    return data;
 //}
 //
-//void Node::setData(int d)
-//{
-//	data = d;
+//template <typename T>
+//void Node<T>::setData(T d) {
+//    data = d;
 //}
 //
-//void Node::showData()
-//{
-//	cout << data << endl;
+//template <typename T>
+//void Node<T>::showData() {
+//    cout << data << endl;
 //}
 //
-//
-//
+//template <typename T>
 //class Stack {
 //private:
-//    Node* head;
+//    Node<T>* head;
+//
 //public:
 //    Stack();
-//    int push(int);
-//    int pop();
-//    int top();
+//    T push(T);
+//    T pop();
+//    T top();
 //    bool isEmpty();
 //};
 //
-//Stack::Stack() {
-//    head = NULL;
-//   
+//template <typename T>
+//Stack<T>::Stack() {
+//    head = nullptr;
 //}
-//int Stack::push(int d) {
-//    Node* ptr = new Node(d);
+//
+//template <typename T>
+//T Stack<T>::push(T d) {
+//    Node<T>* ptr = new Node<T>(d);
 //    ptr->setNext(head);
 //    head = ptr;
 //    return head->getData();
 //}
 //
-//bool Stack::isEmpty() {
-//    return head == NULL;
+//template <typename T>
+//bool Stack<T>::isEmpty() {
+//    return head == nullptr;
 //}
 //
-//int Stack::pop() {
+//template <typename T>
+//T Stack<T>::pop() {
 //    if (isEmpty()) {
-//        cout << "List is empty" << endl;
-//        return -1;
+//        cout << "Stack is empty" << endl;
+//        return T(); // Return default value for the type T
 //    }
-//    int data = head->getData();
-//    Node* temp = head;
+//    T data = head->getData();
+//    Node<T>* temp = head;
 //    head = head->getNext();
 //    delete temp;
-//    
 //    return data;
 //}
 //
-//int Stack::top() {
+//template <typename T>
+//T Stack<T>::top() {
 //    if (isEmpty()) {
-//        cout << "List is empty" << endl;
-//        return -1;
+//        cout << "Stack is empty" << endl;
+//        return T(); // Return default value for the type T
 //    }
-//
 //    return head->getData();
 //}
 //
-//
-//
 //int main() {
-//    Stack stack;
-//    cout << stack.push(10) << endl;
-//    cout<< stack.push(20)<<endl;
-//    cout<< stack.push(30)<<endl;
-//    cout << stack.push(40) << endl;
+//    Stack<int> intStack;
+//    cout << intStack.push(10) << endl;
+//    cout << intStack.push(20) << endl;
+//    cout << intStack.push(30) << endl;
+//    cout << intStack.push(40) << endl;
 //
-//    cout << stack.top() << endl;
+//    cout << intStack.top() << endl;
+//
+//    cout << intStack.pop() << endl;
+//    cout << intStack.pop() << endl;
+//    cout << intStack.pop() << endl;
+//    cout << intStack.pop() << endl;
+//
 //    
-//    cout << stack.pop() << endl;
-//    cout << stack.pop() << endl;
-//    cout << stack.pop() << endl;
-//    cout << stack.pop() << endl;
-//
-//    stack.pop();
-//
-//   stack.top();
 //
 //    return 0;
 //}
+//
+//
+
+
+
+
+
+#include <iostream>
+
+class Node {
+public:
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int value) {
+        data = value;
+        left = nullptr;
+        right = nullptr;
+    }
+};
+
+class BinaryTree {
+private:
+    Node* root;
+
+public:
+    BinaryTree() {
+        root = nullptr;
+    }
+
+    void insert(int value) {
+        root = insertRecursive(root, value);
+    }
+
+    void remove(int value) {
+        root = removeRecursive(root, value);
+    }
+
+    void inorderTraversal() {
+        inorderTraversalRecursive(root);
+        std::cout << std::endl;
+    }
+
+private:
+    Node* insertRecursive(Node* current, int value) {
+        if (current == nullptr) {
+            return new Node(value);
+        }
+
+        if (value < current->data) {
+            current->left = insertRecursive(current->left, value);
+        }
+        else if (value > current->data) {
+            current->right = insertRecursive(current->right, value);
+        }
+
+        return current;
+    }
+
+    Node* findMin(Node* node) {
+        while (node->left != nullptr) {
+            node = node->left;
+        }
+        return node;
+    }
+
+ 
+
+    Node* removeRecursive(Node* current, int value) {
+        if (current == nullptr) {
+            return nullptr;
+        }
+
+        if (value < current->data) {
+            current->left = removeRecursive(current->left, value);
+        }
+        else if (value > current->data) {
+            current->right = removeRecursive(current->right, value);
+        }
+        else {
+            // Node with only one child or no child
+            if (current->left == nullptr) {
+                Node* temp = current->right;
+                delete current;
+                return temp;
+            }
+            else if (current->right == nullptr) {
+                Node* temp = current->left;
+                delete current;
+                return temp;
+            }
+
+            // Node with two children, get the inorder successor
+            Node* temp = findMin(current->right);
+
+            // Copy the inorder successor's content to this node
+            current->data = temp->data;
+
+            // Delete the inorder successor
+            current->right = removeRecursive(current->right, temp->data);
+        }
+
+        return current;
+    }
+
+    void inorderTraversalRecursive(Node* current) {
+        if (current != nullptr) {
+            inorderTraversalRecursive(current->left);
+            std::cout << current->data << " ";
+            inorderTraversalRecursive(current->right);
+        }
+    }
+};
+
+//int main() {
+//    BinaryTree tree;
+//
+//    tree.insert(50);
+//    tree.insert(30);
+//    tree.insert(20);
+//    tree.insert(40);
+//    tree.insert(70);
+//    tree.insert(60);
+//    tree.insert(80);
+//
+//    std::cout << "Inorder Traversal: ";
+//    tree.inorderTraversal();
+//
+//    tree.remove(30);
+//
+//    std::cout << "Inorder Traversal after removing 30: ";
+//    tree.inorderTraversal();
+//
+//    return 0;
+//}
+

@@ -212,6 +212,10 @@
 //
 //	list.display();
 //	cout << list.deleteAtTail() << endl;
+//	cout << list.deleteAtTail() << endl;
+//	cout << list.deleteAtTail() << endl;
+//	cout << list.deleteAtTail() << endl;
+//	cout << list.deleteAtHead() << endl;
 //	cout << list.deleteAtHead() << endl;
 //	cout << "Total Elements: " << list.totalElements() << endl;
 //

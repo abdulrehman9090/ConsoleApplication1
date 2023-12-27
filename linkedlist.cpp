@@ -1,87 +1,89 @@
-//#include<iostream>
+//#include <iostream>
 //using namespace std;
+//
+//template <typename T>
 //class Node {
 //private:
-//	int data;
+//	T data;
 //	Node* next;
+//
 //public:
-//	Node(int d);
+//	Node(T d);
 //	Node* getNext();
 //	void setNext(Node* ptr);
-//	int getData();
-//	void setData(int d);
+//	T getData();
+//	void setData(T d);
 //	void showData();
 //};
 //
-//
-//Node::Node(int d)
-//{
+//template <typename T>
+//Node<T>::Node(T d) {
 //	data = d;
-//	next = NULL;
+//	next = nullptr;
 //}
 //
-//Node* Node::getNext()
-//{
+//template <typename T>
+//Node<T>* Node<T>::getNext() {
 //	return next;
 //}
 //
-//void Node::setNext(Node* ptr)
-//{
+//template <typename T>
+//void Node<T>::setNext(Node* ptr) {
 //	next = ptr;
 //}
 //
-//int Node::getData()
-//{
+//template <typename T>
+//T Node<T>::getData() {
 //	return data;
 //}
 //
-//void Node::setData(int d)
-//{
+//template <typename T>
+//void Node<T>::setData(T d) {
 //	data = d;
 //}
 //
-//void Node::showData()
-//{
+//template <typename T>
+//void Node<T>::showData() {
 //	cout << data << endl;
 //}
 //
-//
-//
+//template <typename T>
 //class LinkedList {
 //private:
-//	Node* current;
-//	Node* head;
+//	Node<T>* current;
+//	Node<T>* head;
 //	int size;
 //	int length;
+//
 //public:
 //	LinkedList();
-//	void add(int d);
+//	void add(T d);
 //	void showList();
 //	void remove();
 //	void get();
 //	void forward();
-//	void insertAtStart(int d);
+//	void insertAtStart(T d);
 //	void backward();
-//	void find(int);
+//	void find(T d);
 //	int getLength();
 //	void start();
-//
 //};
 //
-//LinkedList::LinkedList() {
+//template <typename T>
+//LinkedList<T>::LinkedList() {
 //	size = 0;
 //	length = 0;
-//	current = NULL;
-//	head = NULL;
+//	current = nullptr;
+//	head = nullptr;
 //}
 //
-//
-//int LinkedList::getLength() {
+//template <typename T>
+//int LinkedList<T>::getLength() {
 //	return size;
 //}
 //
-//
-//void LinkedList::start() {
+//template <typename T>
+//void LinkedList<T>::start() {
 //	if (size == 0) {
 //		cout << "list is empty" << endl;
 //		return;
@@ -89,17 +91,13 @@
 //	current = head;
 //}
 //
+//template <typename T>
+//void LinkedList<T>::add(T d) {
+//	Node<T>* ptr = new Node<T>(d);
 //
-//
-//
-//void LinkedList::add(int d)
-//{
-//	Node* ptr = new Node(d);
-//	// its first entry in the list
-//	if (head == NULL) {
+//	if (head == nullptr) {
 //		head = ptr;
 //		current = ptr;
-//		
 //	}
 //	else {
 //		ptr->setNext(current->getNext());
@@ -110,87 +108,76 @@
 //	size++;
 //}
 //
-//void LinkedList::showList()
-//{
+//template <typename T>
+//void LinkedList<T>::showList() {
 //	if (size == 0) {
 //		cout << "List is empty" << endl;
 //		return;
 //	}
 //
-//	Node* temp = head;
-//	while (temp != NULL)
-//	{
+//	Node<T>* temp = head;
+//	while (temp != nullptr) {
 //		temp->showData();
 //		temp = temp->getNext();
 //	}
 //	cout << endl;
-//
-//
 //}
 //
-//void LinkedList::remove()
-//{
-//
-//
-//	// first element to delete
+//template <typename T>
+//void LinkedList<T>::remove() {
 //	if (current == head) {
-//		Node* temp = head;
+//		Node<T>* temp = head;
 //		head = current->getNext();
 //		delete temp;
 //		current = head;
-//      size--;
+//		size--;
 //		return;
 //	}
 //
-//
-//	Node* ptr = head;
-//	Node* temp = current;
+//	Node<T>* ptr = head;
+//	Node<T>* temp = current;
 //	do {
 //		if (ptr->getNext() == current) {
 //			break;
 //		}
 //		ptr = ptr->getNext();
-//
-//	} while (ptr != NULL);
+//	} while (ptr != nullptr);
 //
 //	ptr->setNext(current->getNext());
 //	current = ptr->getNext();
 //	delete temp;
-//	
-//  size--;
-//
+//	size--;
 //}
 //
-//void LinkedList::get()
-//{
-// if (size == 0) 
-//{
-//	cout << "List is empty" << endl;
-//	return;
+//template <typename T>
+//void LinkedList<T>::get() {
+//	if (size == 0) {
+//		cout << "List is empty" << endl;
+//		return;
 //	}
 //	cout << current->getData() << endl;
 //}
 //
-//void LinkedList::forward()
-//{
-//	if (current->getNext() != NULL)
+//template <typename T>
+//void LinkedList<T>::forward() {
+//	if (current->getNext() != nullptr)
 //		current = current->getNext();
 //}
 //
-//void LinkedList::insertAtStart(int d)
-//{
+//template <typename T>
+//void LinkedList<T>::insertAtStart(T d) {
 //	if (size == 0) {
-//		cout << "Atleast one Node should be present" << endl;
+//		cout << "At least one Node should be present" << endl;
 //		return;
 //	}
-//	Node* ptr = new Node(d);
+//	Node<T>* ptr = new Node<T>(d);
 //	ptr->setNext(head);
 //	head = ptr;
-//  size++;
+//	size++;
 //}
 //
-//void LinkedList::backward()
-//{
+//template <typename T>
+//void LinkedList<T>::backward() {
 //	if (size == 0) {
 //		cout << "List is empty Can't go backward" << endl;
 //		return;
@@ -200,71 +187,60 @@
 //		return;
 //	}
 //
-//	Node* temp = head;
+//	Node<T>* temp = head;
 //	do {
-//		// we are trying to break just one node before the current Node
 //		if (temp->getNext() == current) {
 //			break;
 //		}
 //		temp = temp->getNext();
-//
-//	} while (temp != NULL);
+//	} while (temp != nullptr);
 //	current = temp;
 //}
 //
-//void LinkedList::find(int d) {
+//template <typename T>
+//void LinkedList<T>::find(T d) {
 //	if (size == 0) {
 //		cout << "List is empty" << endl;
 //		return;
 //	}
 //	bool found = false;
-//	Node* ptr = head;
-//	do
-//	{
+//	Node<T>* ptr = head;
+//	do {
 //		if (ptr->getData() == d) {
 //			cout << "Value found" << endl;
 //			found = true;
 //			break;
 //		}
-//
 //		ptr = ptr->getNext();
-//		
+//	} while (ptr != nullptr);
 //
-//	} while (ptr != NULL);
-//
-//	if (found == false) {
+//	if (!found) {
 //		cout << "Value not found" << endl;
 //	}
-//
-//
 //}
-//
-//
-//
-//
 //
 //int main() {
-//	LinkedList list;
-//	//list.showList();
-//	list.add(10);
-//	list.add(20);
-//	list.add(30);
-//	list.showList();
-//	list.start();
-//	list.get();
-//	list.find(30);
+//	LinkedList<int> intList;
+//	intList.add(10);
+//	intList.add(20);
+//	intList.add(30);
+//	intList.showList();
+//	intList.start();
+//	intList.get();
+//	intList.find(30);
 //
-//	list.backward();
-//	list.backward();
-//	list.get();
-//	list.remove();
-//	list.showList();
-//	list.backward();
-//	
+//	intList.backward();
+//	intList.backward();
+//	intList.get();
+//	intList.remove();
+//	intList.showList();
+//	intList.backward();
 //
-//	
+//	LinkedList<string> stringList;
+//	stringList.add("Hello");
+//	stringList.add("World");
+//	stringList.showList();
 //
-//
-//	
 //	return 0;
 //}
+//

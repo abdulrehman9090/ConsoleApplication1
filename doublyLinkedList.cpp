@@ -276,6 +276,7 @@
 //	list.add(20);
 //	list.add(30);
 //	list.add(40);
+//	list.showList();
 //	list.backward();
 //	list.remove();
 //	list.get();
@@ -286,4 +287,111 @@
 //
 //
 //	return 0;
+//}
+
+
+//#include <iostream>
+//#include <stdexcept>
+//
+//template <typename T>
+//class Queue {
+//private:
+//    static const int MAX_SIZE = 100;
+//    T data[MAX_SIZE];
+//    int front;
+//    int rear;
+//
+//public:
+//    Queue();
+//    void enqueue(T element);
+//    T dequeue();
+//    T peek();
+//    bool isEmpty();
+//    bool isFull();
+//};
+//
+//template <typename T>
+//Queue<T>::Queue() : front(-1), rear(-1) {}
+//
+//template <typename T>
+//void Queue<T>::enqueue(T element) {
+//    if (isFull()) {
+//        throw std::overflow_error("Queue is full");
+//    }
+//
+//    if (isEmpty()) {
+//        front = rear = 0;
+//    }
+//    else {
+//        rear = (rear + 1) % MAX_SIZE;
+//    }
+//
+//    data[rear] = element;
+//}
+//
+//template <typename T>
+//T Queue<T>::dequeue() {
+//    if (isEmpty()) {
+//        throw std::underflow_error("Queue is empty");
+//    }
+//
+//    T element = data[front];
+//
+//    if (front == rear) {
+//        front = rear = -1; // Reset the queue when the last element is dequeued
+//    }
+//    else {
+//        front = (front + 1) % MAX_SIZE;
+//    }
+//
+//    return element;
+//}
+//
+//template <typename T>
+//T Queue<T>::peek() {
+//    if (isEmpty()) {
+//        throw std::underflow_error("Queue is empty");
+//    }
+//
+//    return data[front];
+//}
+//
+//template <typename T>
+//bool Queue<T>::isEmpty() {
+//    return front == -1 && rear == -1;
+//}
+//
+//template <typename T>
+//bool Queue<T>::isFull() {
+//    return (rear + 1) % MAX_SIZE == front;
+//}
+//
+//int main() {
+//    try {
+//        Queue<int> intQueue;
+//        intQueue.enqueue(10);
+//        intQueue.enqueue(20);
+//        intQueue.enqueue(30);
+//
+//        std::cout << "Front element: " << intQueue.peek() << std::endl;
+//
+//        while (!intQueue.isEmpty()) {
+//            std::cout << "Dequeued: " << intQueue.dequeue() << std::endl;
+//        }
+//
+//        Queue<std::string> stringQueue;
+//        stringQueue.enqueue("Hello");
+//        stringQueue.enqueue("World");
+//
+//        std::cout << "Front element: " << stringQueue.peek() << std::endl;
+//
+//        while (!stringQueue.isEmpty()) {
+//            std::cout << "Dequeued: " << stringQueue.dequeue() << std::endl;
+//        }
+//    }
+//    catch (const std::exception& e) {
+//        std::cerr << "Exception: " << e.what() << std::endl;
+//    }
+//
+//    return 0;
 //}
