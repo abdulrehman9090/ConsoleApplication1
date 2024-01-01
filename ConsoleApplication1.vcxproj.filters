@@ -75,5 +75,8 @@
     <ClCompile Include="final_queue_with_array.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="final_Binary_tree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

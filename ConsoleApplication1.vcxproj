@@ -132,6 +132,7 @@
     <ClCompile Include="circular_linked_list.cpp" />
     <ClCompile Include="doublyLinkedList.cpp" />
     <ClCompile Include="emanPractice.cpp" />
+    <ClCompile Include="final_Binary_tree.cpp" />
     <ClCompile Include="final_queue_with_array.cpp" />
     <ClCompile Include="final_queue_with_linked_list.cpp" />
     <ClCompile Include="JosepProblem_1.cpp" />
