@@ -63,9 +63,6 @@
     <ClCompile Include="QueueWithLinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="emanPractice.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="binarytree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
