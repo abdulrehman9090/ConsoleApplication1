@@ -137,6 +137,7 @@
     <ClCompile Include="final_Binary_tree.cpp" />
     <ClCompile Include="final_hash_function.cpp" />
     <ClCompile Include="final_insertion_sort.cpp" />
+    <ClCompile Include="final_non_Recursive_Tree.cpp" />
     <ClCompile Include="final_selection_sort.cpp" />
     <ClCompile Include="final_queue_with_array.cpp" />
     <ClCompile Include="final_queue_with_linked_list.cpp" />

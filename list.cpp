@@ -214,8 +214,6 @@
 //    list.printList();
 //
 //
-//
-//
 //    l2.add(3);
 //    l2.add(4);
 //    l2.add(5);
